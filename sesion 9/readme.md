@@ -1,1 +1,1 @@
-# Esto no està en otra rama
+# Esto no està en commit desde VSCode
