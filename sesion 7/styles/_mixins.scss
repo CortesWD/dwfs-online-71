@@ -1,0 +1,8 @@
+@mixin opacity {
+  opacity: 0.9;
+}
+
+@mixin handsAnim($time-value) {
+  transform-origin: top;
+  animation: girar $time-value steps(60) infinite;
+}

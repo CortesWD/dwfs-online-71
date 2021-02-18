@@ -1,0 +1,78 @@
+@import './variable';
+@import './mixins';
+
+%toUpper {
+  text-transform: uppercase;
+}
+
+.cualquier-clase {
+  text-emphasis: none;
+}
+
+img {
+  height: $MAIN_WIDTH;
+  position: relative;
+  width: $MAIN_WIDTH;
+  @extend .cualquier-clase;
+}
+
+.eje {
+  border-radius: 100px;
+  background-color: $color_red;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: $MAIN_WIDTH/2;
+  left: $MAIN_WIDTH/2;
+
+  .segundero {
+    background-color: black;
+    position: absolute;
+    width: 6px;
+    height: 300px;
+    top: 5px;
+    left: 5px;
+
+    @include handsAnim(60s);
+    @extend %toUpper;
+  }
+
+  
+  .minutero{
+    background-color: $color_blue;
+    position: absolute;
+    width: 8px;
+    height: 200px;
+    top: 5px;
+    left: 5px;
+
+    @include handsAnim(3600s);
+    @extend %toUpper;
+  }
+  ​
+  .hora{
+    background-color: $color_green;
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    top: 5px;
+    left: 5px;
+
+    @include handsAnim(43200s);
+    @extend .cualquier-clase;
+  }
+  ​
+  .tapa{   
+    border-radius: 100px;
+    background-color: $color_red;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@keyframes girar{
+  to{transform: rotate(360deg);}
+}

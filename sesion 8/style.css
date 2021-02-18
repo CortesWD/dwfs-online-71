@@ -1,0 +1,104 @@
+* {
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+/*vmax y vmin*/
+h3 {
+  font-family: Avenir, sans-serif;
+  font-size: 10vmin;
+  font-weight: 900;
+  text-align: center;
+}
+
+h4 {
+  font-family: Avenir, sans-serif;
+  font-size: 10vmax;
+  font-weight: 900;
+  text-align: center;
+}
+
+.box {
+  background: #6beeff;
+  height: 20vmin;
+  width: 100vmin;
+}
+
+.box-max {
+  background: #6beeff;
+  height: 20vmax;
+  width: 100vmax;
+}
+
+/*vh y vw*/
+.box-vh {
+  background: #6beeff;
+  height: 10vh;
+  width: 10vh;
+}
+
+.box-vw {
+  width: 10vw;
+  height: 10vw;
+  background: #6beeff;
+}
+
+/*em y rem*/
+.parrafo {
+  font-size: 25px;
+}
+
+.parrafo .span-rem {
+  font-size: 1rem;
+  color: red;
+}
+
+.parrafo .span-em {
+  font-size: 1em;
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*media queries*/
+.box-media {
+  height: 50px;
+  background: #6beeff;
+}
+
+.box-media::after {
+  content: "Caja desde 0 a 768px de width";
+}
+
+@media (min-width: 768px) {
+  .box-media {
+    background-color: #6bff84;
+    color: white;
+  }
+  .box-media::after {
+    content: "Caja desde 768px a 1200 de width";
+  }
+}
+
+@media (min-width: 1200px) {
+  .box-media {
+    background-color: #e9ff6b;
+  }
+  .box-media::after {
+    content: "Caja desde 1200 en adelante de width";
+  }
+}
+/*# sourceMappingURL=style.css.map */

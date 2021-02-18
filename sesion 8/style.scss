@@ -1,0 +1,103 @@
+$cyan: #6beeff;
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; // 1REM = 16PX
+}
+
+h2{
+  margin: 20px 0;
+}
+/*vmax y vmin*/
+h3 {
+  font-family: Avenir, sans-serif;
+  font-size: 10vmin;
+  font-weight: 900;
+  text-align: center;
+}
+
+h4 {
+  font-family: Avenir, sans-serif;
+  font-size: 10vmax;
+  font-weight: 900;
+  text-align: center;
+}
+
+.box {
+  background: $cyan;
+  height: 20vmin;
+  width: 100vmin;
+}
+
+.box-max {
+  background: $cyan;
+  height: 20vmax;
+  width: 100vmax;
+}
+
+/*vh y vw*/
+$box_size: 10;
+.box-vh {
+  background: $cyan;
+  height: #{$box_size}vh;
+  width: #{$box_size}vh;
+}
+
+.box-vw {
+  width: #{$box_size}vw;
+  height: #{$box_size}vw;
+  background: $cyan;
+}
+
+
+/*em y rem*/
+.parrafo {
+  font-size: 25px;
+
+  .span-rem {
+    font-size: 1rem; // 1rem = 16px <- porque lo toma del font-size de HTML
+    color: red;
+  }
+  
+  .span-em {
+    font-size: 1em; // 1em = 25px <- porque .parrafo es el elemento padre.
+    color: red;
+  }
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/*media queries*/
+.box-media {
+  height: 50px;
+  background: $cyan;
+
+  &::after {
+    content: "Caja desde 0 a 768px de width";
+  }
+
+  @media (min-width: 768px) {
+    background-color: #6bff84;
+    color: white;
+
+    &::after {
+      content: "Caja desde 768px a 1200 de width";
+    }
+  }
+
+  @media (min-width: 1200px) {
+    background-color: #e9ff6b;
+
+    &::after {
+      content: "Caja desde 1200 en adelante de width";
+    }
+  }
+}
