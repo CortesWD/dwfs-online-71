@@ -1,1 +1,1 @@
-# Esto no està en otra cosa
+# Esto no està en otra rama
