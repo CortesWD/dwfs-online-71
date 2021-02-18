@@ -1,1 +1,1 @@
-# Esto no està en master
+# Esto no està en otra rama
