@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.main article,
+.main form {
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4px 8px;
+  height: 650px;
+}
+
+.main article {
+  width: 55%;
+}
+
+.main form {
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+  .main article,
+  .main form {
+    display: block;
+    width: 100%;
+  }
+}
